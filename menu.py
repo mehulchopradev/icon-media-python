@@ -28,6 +28,8 @@ A
 Please enter ur choice: 4
 '''
 
+from math import factorial
+
 # from mathfunctions import even_nos, odd_nos
 # import mathfunctions
 import xyz.supercoders.lib.mathfunctions as mf
@@ -37,11 +39,12 @@ while True:
   print('1. Even nos')
   print('2. Odd nos')
   print('3. Grade calculator')
-  print('4. Exit')
+  print('4. Factorial')
+  print('5. Exit')
   
   choice = int(input('Please enter ur choice: '))
 
-  if choice == 4:
+  if choice == 5:
     break
 
   if choice == 1:
@@ -53,5 +56,8 @@ while True:
   elif choice == 3:
     marks = float(input('Please enter ur marks: '))
     grader(marks)
+  elif choice == 4:
+    n = int(input('Please enter n: '))
+    print(factorial(n))
   else:
     print('Heyy please enter choice 1 to 4')
