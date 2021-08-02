@@ -1,0 +1,14 @@
+Design
+OOP (Object oriented programming)
+
+Real world            -             Software
+
+: Actors              -             : Data (Objects)
+                                        Object
+                                          - class
+                                            - From where multiple objects can be created
+                                            - class has a name also which ultimately becomes the data type for the object
+
+: Characteristics of Actors     -     : Attributes of the object
+
+: Real world actor actions      -     : Methods (functions) called `on the object`
