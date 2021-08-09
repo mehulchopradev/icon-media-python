@@ -37,5 +37,9 @@ print(s2.get_details())
 
 
 
-# s1.get_grade()
-# s2.get_grade()
+# print(s1.get_grade())
+# print(s2.get_grade())
+
+t = s1.get_name_roll()
+print(t[0])
+print(t[1])

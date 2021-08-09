@@ -36,11 +36,13 @@ import xyz.supercoders.lib.mathfunctions as mf
 from xyz.supercoders.lib.school import grader
 
 while True:
-  print('1. Even nos')
+  ''' print('1. Even nos')
   print('2. Odd nos')
   print('3. Grade calculator')
   print('4. Factorial')
-  print('5. Exit')
+  print('5. Exit') '''
+
+  print('1. Even nos', '2. Odd nos', '3. Grade calculator', '4. Factorial', '5. Exit', sep='\n')
   
   choice = int(input('Please enter ur choice: '))
 
