@@ -10,6 +10,9 @@
   - store data of the same data type - Homogenous data (Preferred)
   - allows duplicate data
   - After creating a list, it can be modified at a later point in time (add/remove/update)
+    - [Student data, Student data, ........., Student data]
+    - [('mehul', 10, 'm'), ('jane', 23, 'f')]
+    - [Student object(name, gender, roll), Student object (name, gender, roll)]
 
 
 - tuple
@@ -25,3 +28,25 @@
   - data in a set is stored in an un ordered fashion
   - After creating a set, it can be modified at a later point in time
   - It supports the mathematical set operations (intersection, union, A complement, B complement)
+
+- dict
+  - It stores data as a key-value pair
+  - key is suppose to be unique in the dict
+      - 12: Student data
+      - 21: Student data
+      - 
+      -
+      -
+      - 34: Student data
+      - 56: Student data
+
+      Index: 12, 21, 34, ......, 56
+
+      Key % 10
+      12 % 10 --- Bucket 2
+      21 % 10 -- Bucket 1
+      22 % 10 -- Bucket 2
+
+      Search - 21
+      21 % 10 - Bucket 1
+  - After creating a dict, it can be modified at a later point in time

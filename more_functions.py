@@ -9,3 +9,15 @@ def addition(*numbers):
 print(addition()) # 0
 print(addition(54)) # 54
 print(addition(3, 4, 5, 2, 1)) # 
+
+
+# define perimeter_rectangle() such that it can be called only using function input names syntax
+def perimeter_rectangle(**stats):
+  # print(stats) # stats is a dict data structure
+  # return 2 * (length + breadth)
+  return 2 * (stats['length'] + stats['breadth'])
+
+
+# print(perimeter_rectangle(7, 3))
+print(perimeter_rectangle(length=7, breadth=3))
+print(perimeter_rectangle(breadth=3, length=7))
