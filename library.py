@@ -31,23 +31,42 @@ Book Deleted!
 Please enter ur choice: 4
 '''
 
-import sqlite3
+from dbutils import connection
 
 def add_new_book():
   title = input('Enter title: ')
   price = float(input('Enter price: '))
   pages = int(input('Enter pages: '))
 
-  con = sqlite3.connect('/Users/mehulchopra/Documents/training/kh/icon-media-dataanalytics/library_db.db')
-  con.execute("insert into books (title, price, pages) values ('{0}', {1}, {2})".format(title, price, pages))
-  con.commit()
+  con = connection()
+  ''' con.execute("insert into books (title, price, pages) values ('{0}', {1}, {2})".format(title, price, pages))
+  con.commit() '''
+  with con:
+    con.execute("insert into books (title, price, pages) values ('{0}', {1}, {2})".format(title, price, pages))
+    # it will be commited automatically once it comes out of the with block
   con.close()
 
 def search_books():
-  pass
+  price = float(input('Enter the price: '))
+  con = connection()
+
+  sql = 'select * from books where price = {0}'.format(price)
+  cursor = con.execute(sql)
+  for row in cursor:
+    print('{id} | {title} | {pages}'.format(id=row[0], title=row[1], pages=row[-1]))
+  else:
+    print('No records found!')
+  
+  con.close()
 
 def delete_book():
-  pass
+  book_id = int(input('Enter the book id: '))
+  sql = 'delete from books where id = {0}'.format(book_id)
+
+  con = connection()
+  with con:
+    con.execute(sql)
+  con.close()
 
 while True:
   print('Welcome to my library system')
